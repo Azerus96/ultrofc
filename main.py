@@ -1,5 +1,7 @@
 from flask import Flask, render_template, jsonify, request
 from flask_socketio import SocketIO
+import eventlet
+eventlet.monkey_patch()
 import os
 from game_logic import Game
 from ai_agent import MCCFRAgent
@@ -56,4 +58,4 @@ def get_game_state():
 if __name__ == '__main__':
     # Получаем порт из переменной окружения или используем 5000 по умолчанию
     port = int(os.environ.get('PORT', 5000))
-    socketio.run(app, host='0.0.0.0', port=port, server='eventlet')
+    socketio.run(app, host='0.0.0.0', port=port)
