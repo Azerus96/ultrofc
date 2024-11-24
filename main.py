@@ -52,3 +52,8 @@ def end_game():
 @app.route('/state', methods=['GET'])
 def get_game_state():
     return jsonify(game.get_state())
+
+if __name__ == '__main__':
+    # Получаем порт из переменной окружения или используем 5000 по умолчанию
+    port = int(os.environ.get('PORT', 5000))
+    socketio.run(app, host='0.0.0.0', port=port)
