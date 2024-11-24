@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Китайский Покер</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Китайский Покер</h1>
+    <button id="start">Начать</button>
+    <button id="end">Завершить игру</button>
+
+    <div id="game">
+        <div id="ai-board">
+            <h2>ИИ</h2>
+            <div class="line" id="ai-bottom"></div>
+            <div class="line" id="ai-middle"></div>
+            <div class="line" id="ai-top"></div>
+        </div>
+
+        <div id="player-board">
+            <h2>Игрок</h2>
+            <div class="line" id="player-bottom"></div>
+            <div class="line" id="player-middle"></div>
+            <div class="line" id="player-top"></div>
+        </div>
+    </div>
+
+    <div id="scores">
+        <p id="player-score">Очки игрока: 0</p>
+        <p id="ai-score">Очки ИИ: 0</p>
+    </div>
+
+    <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
